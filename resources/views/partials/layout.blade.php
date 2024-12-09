@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="">
+<html lang="en" data-theme="dracula">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,9 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    @include('partials.nav')
 
-    @yield('content')
+@include('partials.nav')
+
+@yield('content')
 </body>
 </html>
