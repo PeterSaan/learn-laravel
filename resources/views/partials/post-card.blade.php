@@ -7,7 +7,7 @@
     <div class="card-body">
         <h2 class="card-title">{{ $post->title }}</h2>
         @if (isset($full) && $full)
-            <p>{ !! nl2br($post->body) !! }</p>
+            <p>{!! nl2br($post->body) !!}</p>
         @else
             <p>{{ $post->snippet }}</p>
         @endif
