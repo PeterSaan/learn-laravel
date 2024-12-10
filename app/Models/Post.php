@@ -13,6 +13,8 @@ class Post extends Model
 
     protected $fillable = ['title', 'body'];
 
+    protected $withCount = ['comments', 'likes'];
+
     // public function getSnippetAttribute()
     // {
     //     return explode("\n\n", $this->body)[0];
@@ -41,6 +43,10 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 
+    public function likes(){
+        return $this->hasMany(Like::class);
+    }
+
 
     /**
      * The "booted" method of the model.
@@ -52,9 +58,5 @@ class Post extends Model
                 Storage::disk('public')->delete($post->image);
             }
         });
-    }
-
-    public function likes(){
-        return $this->hasMany(Like::class);
     }
 }
