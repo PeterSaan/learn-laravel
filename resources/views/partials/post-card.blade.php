@@ -17,7 +17,7 @@
         <p class="text-neutral-content">{{ $post->created_at->diffForHumans() }}</p>
         <div class="card-actions justify-end">
             @if (!isset($full) || !$full)
-                <a class="btn btn-primary" href="{{ route('post', ['post' => $post]) }}">Read more</a>
+                <a class="btn btn-accent" href="{{ route('post', ['post' => $post]) }}">Read more</a>
             @endif
         </div>
     </div>

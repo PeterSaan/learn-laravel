@@ -24,11 +24,11 @@
                         <td>{{$post->updated_at}}</td>
                         <td>
                             <div class="join">
-                                <a href="" class="btn join-item btn-info">View</a>
-                                <a href="{{route('posts.edit', ['post' => $post ])}}" class="btn join-item btn-warning">Edit</a>
+                                <a href="{{ route('posts.show', ['post' => $post]) }}" class="btn join-item btn-info">View</a>
+                                <a href="{{ route('posts.edit', ['post' => $post]) }}" class="btn join-item btn-warning">Edit</a>
                                 <button form="delete-form-{{$post->id}}" class="btn join-item btn-error">Delete</button>
                             </div>
-                            <form id="delete-form-{{$post->id}}" action="{{route('posts.destroy', ['post' => $post ])}}" method="POST">
+                            <form id="delete-form-{{$post->id}}" action="{{ route('posts.destroy', ['post' => $post ]) }}" method="POST">
                                 @csrf
                             </form>
                         </td>

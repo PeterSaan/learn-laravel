@@ -9,7 +9,6 @@
                     <label class="form-control w-full">
                         <div class="label">
                             <span class="label-text">Email</span>
-
                         </div>
                         <input name="email" type="email" placeholder="Email" value="{{old('email')}}" class="input input-bordered @error('email') input-error @enderror w-full" required autofocus autocomplete="username" />
                         <div class="label">
@@ -39,7 +38,6 @@
                     <div class="flex justify-end items-center gap-2">
                         <a href="{{ route('password.request')}}">Forgot your password?</a>
                         <input type="submit" class="btn btn-primary" value="Login">
-                        {{-- <button class="btn btn-primary">Register</button> --}}
                     </div>
                 </form>
             </div>

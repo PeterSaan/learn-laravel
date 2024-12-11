@@ -2,7 +2,7 @@
 @section('title', 'Home page')
 @section('content')
     <div class="container mx-auto">
-        <div class="my-2 text-center">
+        <div class="my-2 flex justify-center">
         {{ $posts->links() }}
         </div>
         <div class="grid grid-cols-4 gap-4">
