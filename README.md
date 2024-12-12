@@ -9,6 +9,6 @@ npm i
 - Run the app:
 ```bash
 php artisan key:generate
-php artisan migrate
+php artisan migrate --seed
 php artisan serve
 ```
