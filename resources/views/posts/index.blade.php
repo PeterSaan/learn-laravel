@@ -1,7 +1,7 @@
 @extends('partials.layout')
 @section('title', 'Posts')
 @section('content')
-    <div class="container mx-auto">
+    <div class="container mx-auto mt-4">
         <a href="{{route('posts.create')}}" class="btn btn-primary">New Post</a>
         <div class="text-center my-2">
             {{$posts->links()}}
@@ -24,7 +24,7 @@
                         <td>{{$post->updated_at}}</td>
                         <td>
                             <div class="join">
-                                <a href="{{ route('posts.show', ['post' => $post]) }}" class="btn join-item btn-info">View</a>
+                                <a href="{{ route('posts.view', ['post' => $post]) }}" class="btn join-item btn-info">View</a>
                                 <a href="{{ route('posts.edit', ['post' => $post]) }}" class="btn join-item btn-warning">Edit</a>
                                 <button form="delete-form-{{$post->id}}" class="btn join-item btn-error">Delete</button>
                             </div>

@@ -1,7 +1,7 @@
 @extends('partials.layout')
-@section('title', 'Show Post')
+@section('title', 'View Post')
 @section('content')
-    <div class="container mx-auto">
+    <div class="container mx-auto mt-4">
         <div class="grid gap-y-2">
             <div class="text-2xl font-bold">Title</div>
             <p>{{ $post->title }}</p>
