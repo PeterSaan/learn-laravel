@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublicController;
@@ -8,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PublicController::class, 'index'])->name('home');
 Route::get('/secure', [PublicController::class, 'secure'])->middleware(['password.confirm']);
 Route::get('/post/{post}', [PublicController::class, 'post'])->name('post');
+Route::post('/comment/{post}', [CommentController::class, 'store'])->name('comment.create');
 
 Route::get('/admin/posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('/admin/posts/{post}', [PostController::class, 'view'])->name('posts.view');

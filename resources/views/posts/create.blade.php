@@ -9,7 +9,6 @@
                     <label class="form-control w-full">
                         <div class="label">
                             <span class="label-text">Title</span>
-
                         </div>
                         <input name="title" type="text" placeholder="Title" value="{{old('title')}}" class="input input-bordered @error('title') input-error @enderror w-full"/>
                         <div class="label">
@@ -21,7 +20,6 @@
                     <label class="form-control w-full">
                         <div class="label">
                             <span class="label-text">Content</span>
-
                         </div>
                         <textarea rows="12" name="body" placeholder="Write something cool..." class="textarea textarea-bordered @error('body') textarea-error @enderror w-full">{{old('body')}}</textarea>
                         <div class="label">

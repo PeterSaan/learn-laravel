@@ -10,6 +10,17 @@ class Comment extends Model
     /** @use HasFactory<\Database\Factories\CommentFactory> */
     use HasFactory;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'body',
+        'user_id',
+        'post_id'
+    ];
+
     public function post(){
         return $this->belongsTo(Post::class);
     }
