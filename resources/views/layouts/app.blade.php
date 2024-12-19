@@ -14,13 +14,7 @@
 <body>
         @include('partials.nav')
 
-        @isset($header)
-                    {{ $header }}
-        @endisset
-
-        <main>
-            {{ $slot }}
-        </main>
+        @yield('content')
 </body>
 
 </html>
